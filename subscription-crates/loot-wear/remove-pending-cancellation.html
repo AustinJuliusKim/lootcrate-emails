@@ -1,0 +1,667 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  <title>Level Up</title>
+
+  <style type="text/css">
+    div,p,a,li,td{
+      -webkit-text-size-adjust:none;
+    }
+    *{
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    .content-link {
+      color: #ff5f00 !important;
+      text-decoration: underline !important;
+    }
+    .ReadMsgBody{
+      width:100%;
+      background-color:#ffffff;
+    }
+    .ExternalClass{
+      width:100%;
+      background-color:#ffffff;
+    }
+    body{
+      width:100%;
+      height:100%;
+      background-color:#ffffff;
+      margin:0;
+      padding:0;
+      -webkit-font-smoothing:antialiased;
+    }
+    @font-face {font-family: 'proxima_nova_rgregular'; src: url('http://rocketway.net/themebuilder/template/templates/titan/font/proximanova-regular-webfont.eot');src: url('http://rocketway.net/themebuilder/template/templates/titan/font/proximanova-regular-webfont.eot?#iefix') format('embedded-opentype'),url('http://rocketway.net/themebuilder/template/templates/titan/font/proximanova-regular-webfont.woff') format('woff'),url('http://rocketway.net/themebuilder/template/templates/titan/font/proximanova-regular-webfont.ttf') format('truetype');font-weight: normal;font-style: normal;
+    }
+    html{
+      width:100%;
+      background-color:#ffffff;
+    }
+    p{
+      padding:0!important;
+      margin-top:0!important;
+      margin-right:0!important;
+      margin-bottom:0!important;
+      margin-left:0!important;
+    }
+    .jump:hover{
+      opacity:0.75;
+      filter:alpha(opacity=75);
+      padding-top:10px!important;
+    }
+    .sliderFallback:hover{
+      opacity:0.85;
+      filter:alpha(opacity=85);
+    }
+    a#rotator img{
+      -webkit-transition:all 1s ease-in-out;
+      -moz-transition:all 1s ease-in-out;
+      -o-transition:all 1s ease-in-out;
+      -ms-transition:all 1s ease-in-out;
+    }
+    a#rotator img:hover{
+      -webkit-transform:rotate(360deg);
+      -moz-transform:rotate(360deg);
+      -o-transform:rotate(360deg);
+      -ms-transform:rotate(360deg);
+    }
+    .sliderFallback{
+      -webkit-animation:disapear 10s infinite;
+      -moz-animation:disapear 10s infinite;
+      -o-animation:disapear 10s infinite;
+      animation:disapear 10s infinite;
+    }
+    0{
+      opacity:0;
+    }
+    100{
+      opacity:0;
+    }
+    0{
+      opacity:0;
+    }
+    100{
+      opacity:0;
+    }
+    0{
+      opacity:0;
+    }
+    100{
+      opacity:0;
+    }
+    0{
+      opacity:0;
+    }
+    100{
+      opacity:0;
+    }
+    .logo img{
+      width:117px;
+      height:auto;
+    }
+    .icon69 img{
+      width:69px;
+      height:auto;
+    }
+    .image600 img{
+      width:600px;
+      height:auto;
+    }
+    .image269 img{
+      width:269px;
+      height:auto;
+    }
+    .image322 img{
+      width:322px;
+      height:auto;
+    }
+    .image138 img{
+      width:138px;
+      height:auto;
+    }
+    .image170 img{
+      width:170px;
+      height:auto;
+    }
+    .icon12 img{
+      width:12px;
+      height:auto;
+    }
+    #slider_theme.activeSlider{
+      position:relative;
+      width:100%;
+      overflow:hidden;
+      min-height:100px;
+      height:auto;
+    }
+    #slider_theme.activeSlider .control{
+      position:relative;
+      left:0px;
+      white-space:nowrap;
+      animation:slider-navigate 10s infinite;
+      -webkit-animation:slider-navigate 10s infinite;
+      -moz-animation:slider-navigate 10s infinite;
+      -o-animation:slider-navigate 10s infinite;
+      font-size:0px;
+      width:100%;
+    }
+    #slider_theme .control img{
+      margin:0px;
+      padding:0px;
+      display:inline-block;
+      vertical-align:middle;
+    }
+    #slider_theme .control img:first-child{
+      width:100%;
+    }
+    #slider_theme.activeSlider .control img{
+      -moz-animation:show-width 10s infinite;
+      -webkit-animation:show-width 10s infinite;
+      -o-animation:show-width 10s infinite;
+      animation:show-width 10s infinite;
+    }
+    0{
+      width:25%;
+      max-width:25%;
+    }
+    100{
+      width:25%;
+      max-width:25%;
+    }
+    0{
+      width:25%;
+      max-width:25%;
+    }
+    100{
+      width:25%;
+      max-width:25%;
+    }
+    0{
+      width:25%;
+      max-width:25%;
+    }
+    100{
+      width:25%;
+      max-width:25%;
+    }
+    0{
+      width:25%;
+      max-width:25%;
+    }
+    100{
+      width:25%;
+      max-width:25%;
+    }
+    0{
+      left:0%;
+      display:block;
+      width:400%;
+    }
+    12{
+      left:0%;
+    }
+    34{
+      left:-100%;
+    }
+    46{
+      left:-100%;
+    }
+    68{
+      left:-200%;
+    }
+    80{
+      left:-200%;
+    }
+    100{
+      left:0%;
+      width:400%;
+    }
+    0{
+      left:0%;
+      display:block;
+      width:400%;
+    }
+    12{
+      left:0%;
+    }
+    34{
+      left:-100%;
+    }
+    46{
+      left:-100%;
+    }
+    68{
+      left:-200%;
+    }
+    80{
+      left:-200%;
+    }
+    100{
+      left:0%;
+      width:400%;
+    }
+    0{
+      left:0%;
+      display:block;
+      width:400%;
+    }
+    12{
+      left:0%;
+    }
+    34{
+      left:-100%;
+    }
+    46{
+      left:-100%;
+    }
+    68{
+      left:-200%;
+    }
+    80{
+      left:-200%;
+    }
+    100{
+      left:0%;
+      width:400%;
+    }
+    0{
+      left:0%;
+      display:block;
+      width:400%;
+    }
+    12{
+      left:0%;
+    }
+    34{
+      left:-100%;
+    }
+    46{
+      left:-100%;
+    }
+    68{
+      left:-200%;
+    }
+    80{
+      left:-200%;
+    }
+    100{
+      left:0%;
+      width:400%;
+    }
+    body[yahoo] #slider_theme .control img{
+      display:none;
+    }
+    body[yahoo] #slider_theme .control img:first-child{
+      display:block !important;
+    }
+    @media only screen and (max-width: 640px){
+      body{
+        width:auto!important;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      table[class=full]{
+        width:100%!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      table[class=mobile]{
+        width:100%!important;
+        padding-left:20px;
+        padding-right:20px;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      table[class=fullCenter]{
+        width:100%!important;
+        text-align:center!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      td[class=fullCenter]{
+        width:100%!important;
+        text-align:center!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      .erase{
+        display:none;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      .buttonScale{
+        text-align:center!important;
+        float:none!important;
+      }
+    }
+    @media only screen and (max-width: 640px){
+      .image600 img{
+        width:100%!important;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      body{
+        width:auto!important;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      table[class=full]{
+        width:100%!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      table[class=mobile]{
+        width:100%!important;
+        padding-left:20px;
+        padding-right:20px;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      table[class=fullCenter]{
+        width:100%!important;
+        text-align:center!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      td[class=fullCenter]{
+        width:100%!important;
+        text-align:center!important;
+        clear:both;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      .erase{
+        display:none;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      .buttonScale{
+        text-align:center!important;
+        float:none!important;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      .font34{
+        font-size:26px!important;
+        line-height:34px!important;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      .image322 img{
+        width:100%!important;
+        height:auto;
+      }
+    }
+    @media only screen and (max-width: 479px){
+      .image600 img{
+        width:100%!important;
+      }
+    }
+    body{
+      background:none !important;
+    }
+  </style>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" style="background-color: #ffffff;">
+  <!--[if gte mso 9]>
+  <v:background xmlns:v="urn:schemas-microsoft-com:vml" fill="t">
+    <v:fill type="tile" src="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/52049d33-9720-480d-935c-fda385aa5d3d.jpg" color="#eb887b"/>
+  </v:background>
+  <![endif]-->
+  <!-- Wrapper 1  -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" height="inherit" background="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/52049d33-9720-480d-935c-fda385aa5d3d.jpg">
+    <tr>
+      <td width="100%" background="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/52049d33-9720-480d-935c-fda385aa5d3d.jpg">
+
+        <!-- Wrapper -->
+        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tr>
+            <td width="100%">
+
+              <!-- Start Nav -->
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%" height="25"></td>
+                </tr>
+                <tr>
+                  <td width="100%" valign="middle" class="logo">
+                    <!-- Logo -->
+                    <table width="138" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                      <tr>
+                        <td height="60" valign="middle" width="100%" style="text-align: left;" class="fullCenter">
+                          <a href="#"><img width="117" src="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/68ecd267-b9e2-4c8d-84e7-16d03d92eccc.png" alt="" border="0"></a>
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Space -->
+                    <table width="1" border="0" cellpadding="0" cellspacing="0" align="right" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="full">
+                      <tr>
+                        <td width="100%" height="10"></td>
+                      </tr>
+                    </table><!-- End Space -->
+                  </td>
+                </tr>
+              </table><!-- End Nav -->
+
+              <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                <tr>
+                  <td width="100%" height="40"></td>
+                </tr>
+
+                <tr>
+                  <td valign="middle" width="100%" class="level-logo">
+                    <!-- Logo -->
+                    <table width="138" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                      <tr>
+                        <td height="60" valign="middle" width="100%" style="text-align: center;" class="fullCenter">
+                          <img width="275" src="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/50ae2111-844c-4005-a514-858f559d03a4.png" alt="" border="0">
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table><!-- End Nav -->
+
+              <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                <tr>
+                  <td width="100%" height="10"></td>
+                </tr>
+
+                <tr>
+                  <td valign="middle" width="100%" class="level-logo">
+                    <!-- Logo -->
+                    <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+<!--                      <tr>
+                        <td height="80" valign="middle" width="100%" style="text-align: center;" class="fullCenter">
+                          <img width="100%" src="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/7cc2de43-5a4d-444c-b0e8-6130d3554000.png" alt="" border="0">
+                        </td>
+                      </tr> -->
+                      <tr>
+                        <td height="80" valign="middle" width="100%" style="text-align: center;" class="fullCenter">
+                        <h1 style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal; font-size: 3.5em; color:#ff5f00;">Loot Wear Restored</h1>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table><!-- End Nav -->
+
+            </td>
+          </tr>
+        </table><!-- End Wrapper -->
+
+        <!-- Wrapper -->
+        <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tr>
+            <td width="100%">
+
+              <!-- Centered Title -->
+              <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                <tr>
+                  <td width="100%" height="10"></td>
+                </tr>
+                <tr>
+                  <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 18px; color: #c8c8c8; line-height: 24px;" class="fullCenter">
+                    <!--[if !mso]><!-->
+                    <p style="font-family: 'proxima_nova_rgbold', Helvetica; font-weight: 600; font-weight: normal; font-size: 30px;">
+                        <!--<![endif]-->
+                        Cancellation cancelled!
+                        <br/><br/>
+                          <span style="font-size: 25px;">
+                          That was close, wasn't it?
+                        </span>
+                        <!--[if !mso]><!-->
+                      </p><!--<![endif]-->
+                  </td>
+                </tr>
+                <tr>
+                  <td width="100%" height="100"></td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+        <!-- End Wrapper 2 -->
+      </td>
+    </tr>
+  </table><!-- Wrapper 5 -->
+
+  <!-- Wrapper 5 -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+    <tr>
+      <td width="100%" valign="top">
+
+        <!-- Wrapper -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tr>
+            <td>
+              <!-- Space -->
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%" height="30"></td>
+                </tr>
+              </table><!-- End Space -->
+
+              <!-- Wrapper -->
+              <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%" valign="top" class="icon69">
+
+                    <!-- Column 1 -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="left" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+
+                      <tr>
+                        <td width="100%" height="30"></td>
+                      </tr>
+                      <tr>
+                        <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: #323133; line-height: 24px;" class="fullCenter">
+                          <!--[if !mso]><!-->
+                          <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;"><!--<![endif]-->
+                          Hello *|LNAME|*,<br><br>
+                          You've successfully nullified your cancellation request, which means you will still get your awesome Loot Wear delivery as scheduled! Canceling a cancellation can be quite confusing, but we just got through it together. High five!
+
+                          <br><br>
+                          Stay Super,<br>
+                          Team Loot Wear
+                            <br><br>
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td width="100%" height="10"></td>
+                      </tr>
+                      <tr>
+                        <td valign="middle" width="100%" style="text-align: left; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(40, 153, 216); line-height: 24px;" class="fullCenter">
+                          <img style="width:200px;" src="https://gallery.mailchimp.com/1f53721d6da415ab862195987/images/59f0239b-35fc-451c-8b64-22a2bb430762.png">
+                        </td>
+                      </tr>
+                    </table>
+                    <!-- Space -->
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%" height="30"></td>
+                </tr>
+              </table><!-- End Space -->
+
+                  </td>
+                </tr>
+              </table><!-- End Wrapper 2 -->
+
+              <!-- Space -->
+              <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%" height="30"></td>
+                </tr>
+              </table><!-- End Space -->
+
+            </td>
+          </tr>
+        </table><!-- End Wrapper -->
+
+
+      </td>
+    </tr>
+  </table><!-- Wrapper 5 -->
+
+  <!-- Wrapper 2 -->
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="full" style="background-color: #242425;">
+    <tr>
+      <td width="100%" valign="top">
+
+
+        <!-- Wrapper -->
+        <table width="100%" border="0" cellpadding="0" cellspacing="0" align="center" class="mobile">
+          <tr>
+            <td>
+
+              <!-- Wrapper -->
+              <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" class="full">
+                <tr>
+                  <td width="100%">
+
+                    <!-- Centered Title -->
+                    <table width="600" border="0" cellpadding="0" cellspacing="0" align="center" style="border-collapse:collapse; mso-table-lspace:0pt; mso-table-rspace:0pt;" class="fullCenter">
+                      <tr>
+                        <td width="100%" height="50"></td>
+                      </tr>
+
+                      <tr>
+                        <td valign="middle" width="100%" style="text-align: center; font-family: Helvetica, Arial, sans-serif; font-size: 14px; color: rgb(184, 184, 184); line-height: 24px;" class="fullCenter">
+                          <!--[if !mso]><!-->
+                          <span style="font-family: 'proxima_nova_rgregular', Helvetica; font-weight: normal;">
+                          <!--<![endif]-->
+                            &copy;Copyright Loot Crate&trade; 2016
+                          <!--[if !mso]><!-->
+                          </span><!--<![endif]-->
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td width="100%" height="50"></td>
+                      </tr>
+                    </table>
+
+                  </td>
+                </tr>
+              </table><!-- End Wrapper 2 -->
+
+            </td>
+          </tr>
+        </table><!-- End Wrapper -->
+
+
+      </td>
+    </tr>
+  </table><!-- Wrapper 2 -->
+
+</body>
